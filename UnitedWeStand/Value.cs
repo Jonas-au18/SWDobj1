@@ -4,16 +4,16 @@ namespace UnitedWeStand
 {
     public class Value
     {
-        private double _value;
+        private Originator _myOriginator;
         private ICaretaker care;
 
         public double value_
         {
-            get { return _value;}
+            get { return _myOriginator.value_;}
             set
             {
-                _value = value;
-                care.add(saveStateToMemento());
+                _myOriginator.value_ = value;
+                care.add(_myOriginator.saveStateToMemento());
             }
         }
 
@@ -25,28 +25,28 @@ namespace UnitedWeStand
 
         public void adding(double a)
         {
-            _value = a + double.Parse(Console.ReadLine());
+            value_ = a + double.Parse(Console.ReadLine());
         }
 
         public void subtract(double a)
         {
-            _value = a - double.Parse(Console.ReadLine());
+            value_ = a - double.Parse(Console.ReadLine());
         }
 
         public void multipy(double a)
         {
-            _value = a * double.Parse(Console.ReadLine());
+            value_ = a * double.Parse(Console.ReadLine());
         }
 
         public void divide(double a)
         {
-            _value = a / double.Parse(Console.ReadLine());
+            value_ = a / double.Parse(Console.ReadLine());
         }
 
         public void power(double a)
         {
             double b = double.Parse(Console.ReadLine());
-            _value = (Math.Pow(a,b));
+            value_ = (Math.Pow(a,b));
         }
 
         public void clear()
@@ -77,18 +77,8 @@ namespace UnitedWeStand
                 Console.WriteLine("Index is out of scope - setting to last memento.");
                 index = care.numberOfMementos() - 1;
             }
-            Memento temp = care.get(index);
-            getStateFromMemento(temp);
+            _myOriginator.getStateFromMemento(care.get(index));
         }
 
-        public Memento saveStateToMemento()
-        {
-            return new Memento(value_);
-        }
-
-        public void getStateFromMemento(Memento memento)
-        {
-            value_ = memento.value;
-        }
     }
 }
