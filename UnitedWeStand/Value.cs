@@ -20,6 +20,7 @@ namespace UnitedWeStand
         public Value()
         {
             care = new Caretaker();
+            _myOriginator = new Originator();
         }
 
 

@@ -9,7 +9,6 @@ namespace UnitedWeStand
         {
             Calculator myCalc = new Calculator();
             Value myVal = new Value();
-            Caretaker care = new Caretaker();
 
             string function = "";
 
@@ -24,7 +23,6 @@ namespace UnitedWeStand
                 goto Quit;
             }
 
-            care.add(myVal.saveStateToMemento());
 
             bool finish = false;
             do
@@ -91,7 +89,6 @@ namespace UnitedWeStand
                 }
                 myCalc.onCall();
                 Console.WriteLine("\n" + myVal.value_ + "\n");
-                care.add(myVal.saveStateToMemento());
             } while (!finish);
             Quit: finish = true;
         }

@@ -15,7 +15,7 @@ namespace UnitedWeStand
             get { return _value; }
             set
             {
-                value_ = value;
+                _value = value;
             }
         }
 
