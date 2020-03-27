@@ -12,7 +12,7 @@ namespace UnitedWeStand
 
             string function = "";
 
-            System.Console.WriteLine("Fancy calculator");
+            Console.WriteLine("Fancy calculator");
             Console.WriteLine("Input first value");
             try
             {

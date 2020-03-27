@@ -53,7 +53,6 @@ namespace UnitedWeStand
         {
             Console.WriteLine("\n cleared value \n input new value\n");
             value_ = double.Parse(Console.ReadLine());
-            care.add(saveStateToMemento());
         }
 
         public void rollBack()
