@@ -41,13 +41,25 @@ namespace UnitedWeStand
 
         public void divide(double a)
         {
-            value_ = a / double.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+            if (b <= 0)
+            {
+                Console.WriteLine("Never divide with 0!!!");
+                b = 1;
+            }
+
+            value_ = a / b;
         }
 
         public void power(double a)
         {
             double b = double.Parse(Console.ReadLine());
             value_ = (Math.Pow(a,b));
+            if (value_ > double.MaxValue)
+            {
+                Console.WriteLine("Thats a big number :O I cut a bit off the top.");
+                value_ = double.MaxValue;
+            }
         }
 
         public void clear()

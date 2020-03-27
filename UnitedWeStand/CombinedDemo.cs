@@ -55,7 +55,7 @@ namespace UnitedWeStand
 
                     case '*':
                         {
-                            myCalc.setCommand(new multipy(myVal));
+                            myCalc.setCommand(new multiply(myVal));
                             break;
                         }
 

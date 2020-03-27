@@ -47,11 +47,11 @@ namespace UnitedWeStand
         }
     }
 
-    public class multipy : ICommand
+    public class multiply : ICommand
     {
         private Value _value;
 
-        public multipy(Value val)
+        public multiply(Value val)
         {
             _value = val;
         }
