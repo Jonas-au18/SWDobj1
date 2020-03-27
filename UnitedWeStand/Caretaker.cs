@@ -17,7 +17,7 @@ namespace UnitedWeStand
             return _mementoes[index];
         }
 
-        public int numberOfMemntos()
+        public int numberOfMementos()
         {
             return _mementoes.Count;
         }

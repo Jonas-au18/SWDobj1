@@ -58,7 +58,7 @@ namespace UnitedWeStand
         public void rollBack()
         {
             var index = 0;
-            Console.WriteLine("Pick point of roleback \n Possible points are from 0 - " + care.numberOfMemntos());
+            Console.WriteLine("Pick point of roleback \n Possible points are from 0 - " + care.numberOfMementos());
             try
             {
                 index = Int32.Parse(Console.ReadLine());
@@ -70,12 +70,12 @@ namespace UnitedWeStand
             catch (Exception e)
             {
                 Console.WriteLine("Input must be number, index set to last memento");
-                index = care.numberOfMemntos() - 1;
+                index = care.numberOfMementos() - 1;
             }
-            if (index > care.numberOfMemntos() - 1)
+            if (index > care.numberOfMementos() - 1)
             {
                 Console.WriteLine("Index is out of scope - setting to last memento.");
-                index = care.numberOfMemntos() - 1;
+                index = care.numberOfMementos() - 1;
             }
             Memento temp = care.get(index);
             getStateFromMemento(temp);

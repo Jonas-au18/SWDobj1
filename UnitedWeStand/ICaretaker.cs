@@ -6,6 +6,6 @@
 
         Memento get(int index);
 
-        int numberOfMemntos();
+        int numberOfMementos();
     }
 }
